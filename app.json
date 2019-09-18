@@ -1,0 +1,62 @@
+{
+  "id": "com.etopcontrols.zigbee",
+  "sdk": 2,
+  "name": {
+      "en": "Etop Zigbee Thermostat"
+  },
+  "description": {
+      "en": "Support for Etop Zigbee Thermostat"
+  },
+  "category": "climate",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.13",
+  "author": {
+      "name": "Martin Brasse",
+      "email": "kasteleman@gmail.com"
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "drivers": [
+    {
+      "id": "v90ladg",
+      "name": {
+        "en": "v90ladg Thermostaat",
+        "nl": "v90ladg Thermostaat"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 4,
+          "max": 28,
+          "step": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/v90ladg/assets/images/large.png",
+        "small": "drivers/v90ladg/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "_TYST11_wv90ladg",
+        "productId": "v90ladg",
+        "deviceId": 256,
+        "profileId": 260,
+        "learnmode": {
+          "image": "drivers/v90ladg/assets/learnmode.svg",
+          "instruction": {
+            "en": "The zone control contains a push button underneath the back cover\n\nPress the button briefly allowing the zone control to be visible for the gateway. When the zone control is not paired, it will try to join an available network after prrssing the button.\n\nTo remove from a network:\n\n1. Press and hold the button on the backside for 3 seconds and release.\n2. Within 1 second, press and hold the button for 3 seconds again and release.\n3. Within 1 second, press and hold the button for 10 seconds and release.\n\nAfter you have released the button, the LED will burn solid re for 5 seconds: the zone control has left the network.",
+            "nl": "Onder de achterkant van de zonebediening vind je een drukknop.\n\nDruk kort op de knop, zodat de zonebediening zichtbaar wordt voor de ZigBee-gateway. Indien de zonebediening nog niet op een ander netwerk is aangemeld, zal deze nu aanmelden op een beschikbaar netwerk.\n\nVoor verwijdering uit het netwerk voer de volgende acties uit:\n\n 1. Druk de knop op de achterkant 3 seconden in en laat los.\n2. Druk binnen 1 seconde opnieuw de knop 3 seconden in en laat los\n3. Druk binnen 1 seconde de knop 10 seconden in en laat los.\n\nNadat je de knop hebt losgelaten, brandt de LED 5 seconden: de zonebediening verlaat nu het netwerk."
+          }
+        }
+      }
+    }
+  ],
+  "flow": {
+    "triggers": []
+  }
+}
